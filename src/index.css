@@ -7,6 +7,8 @@
   --light-grayish-blue: hsl(223 64% 98%);
   --white: hsl(0 0% 100%);
   --black: hsl(0 0% 0%);
+  --orange: hsl(26, 100%, 55%);
+  --pale-orange: hsl(25, 100%, 94%);
   /* (with 75% opacity for lightbox background) */
 }
 
