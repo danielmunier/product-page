@@ -2,3 +2,9 @@
     margin: 0 4rem;
 
 }
+
+@media (max-width: 999px) {
+    .App {
+        margin: 0;
+    }
+}

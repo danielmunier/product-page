@@ -40,8 +40,8 @@
 }
 .photos_carrousel img:hover {
     border: 2px solid var(--orange);
-    filter: brightness(50%);
-    transition: border 0.5s;
+    opacity:  0.4;
+    transition: border 0.7s;
     
 }
 
@@ -53,7 +53,7 @@
 .product_info {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 30%;
 }
 
 .product_info h3 {
@@ -61,11 +61,12 @@
 }
 
 .product_description {
-    color: var(--grayish-blue);
+    color: var(--dark-grayish-blue);
 }
 
 #product_price {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     align-items: center;
 
@@ -76,7 +77,8 @@
     font-size: 2rem;
 }
 #product_price > #discount {
-    padding: 2px 4px;
+    padding: 3px 6px;
+    font-weight: 600;
     border-radius: 15%;
     color: white;
     background-color: var(--black);
@@ -92,7 +94,7 @@
     display: flex;
     gap: 1rem;
     background-color: var(--orange);
-    padding: 1rem 4rem;
+    padding: 20px 40px;
     border-radius: 0.5rem;
     color: var(--black);
     font-weight: 600;
@@ -101,5 +103,80 @@
 
 #add_cart img{
     filter: brightness(0);
+    max-height: 100%;
     
+}
+
+.controls {
+    display: flex;
+    margin: 2rem 0;
+    justify-content: space-between;
+}
+
+
+
+#control_quantity {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: var(--light-grayish-blue);
+
+}
+
+#control_quantity span {
+    font-weight: 700;
+}
+
+#control_quantity img {
+    cursor: pointer;
+}
+
+
+@media (max-width: 999px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photos {
+        width: 100%;
+    }
+    .photos img {
+        border-radius: 0;
+
+    }
+
+    .photos_carrousel {
+        display: none;
+    }
+
+    .product_info {
+        margin-top: 2rem;
+        width: 90%;
+    }
+
+  
+
+    .product_description, h3,p {
+        margin: 0;
+    }
+
+    #product_price {
+        display: flex;
+    }
+
+    .original_price {
+        display: inline-block;
+    }
+
+    .controls {
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+    }
+    .controls #add_cart {
+        justify-content: center;
+    }
 }

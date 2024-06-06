@@ -1,16 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import "./product.css";
-import mainPhoto from "../assets/images/image-product-1.jpg";
-import imageCarrousel1 from "../assets/images/image-product-1-thumbnail.jpg";
-import imageCarrousel2 from "../assets/images/image-product-2-thumbnail.jpg";
-import imageCarrousel3 from "../assets/images/image-product-3-thumbnail.jpg";
-import imageCarrousel4 from "../assets/images/image-product-4-thumbnail.jpg";
+import imageProduct1 from "../assets/images/image-product-1.jpg";
+import imageProduct2 from "../assets/images/image-product-2.jpg";
+import imageProduct3 from "../assets/images/image-product-3.jpg";
+import imageProduct4 from "../assets/images/image-product-4.jpg";
+
+
+import plusSign from "../assets/images/icon-plus.svg";
+import minusSign from "../assets/images/icon-minus.svg";
 
 import cart from "../assets/images/icon-cart.svg"
 
 
 const Product = () => {
 
+  const [quantity, setQuantity] = useState(0);
+  const [mainImage, setMainImage] = useState(imageProduct1);
+
+  const thumbnails = [
+   imageProduct1,
+   imageProduct2,
+   imageProduct3,
+   imageProduct4
+  ]
+
+const handleChangeImage = ((index) => {
+  setMainImage(thumbnails[index]);
+})
 
 
 
@@ -19,15 +35,18 @@ const Product = () => {
       <div className="photos">
         <img
           className="main_photo"
-          src={mainPhoto}
+          src={mainImage}
           alt="Main image of the product"
           srcset=""
         />
         <div className="photos_carrousel">
-          <img src={imageCarrousel1} alt="" />
-          <img src={imageCarrousel2} alt="" />
-          <img src={imageCarrousel3} alt="" />
-          <img src={imageCarrousel4} alt="" />
+          {
+            thumbnails.map((image, index) => {
+              return (
+                <img onClick={() => {handleChangeImage(index)}} key={index} src={image} alt="" />
+              )
+            })
+          }
         </div>
       </div>
 
@@ -46,17 +65,18 @@ const Product = () => {
         </div>
         <span id="original_price">$250.00</span>
 
-        <div>
+        <div className="controls">
 
-              <div>
-                <input type="number" id="quantity" />
+              <div id="control_quantity">
+                <img onClick={() => {setQuantity(quantity - 1)}} src={minusSign} alt="" />
+                <span>{quantity}</span>
+                <img onClick={() => {setQuantity(quantity + 1)}} src={plusSign} alt="" />
               </div>
-
 
             <button id="add_cart">
                 <img src={cart} alt="" />
                 <span>Add to cart</span>
-                </button>
+            </button>
         </div>
 
 
