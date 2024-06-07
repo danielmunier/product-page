@@ -13,7 +13,6 @@ import "./slider.css"
 
 
 const Slider = () => {
-  const [quantity, setQuantity] = useState(0);
   const [mainImageIndex, setMainImageIndex] = useState(0);
 
   const thumbnails = [
@@ -22,7 +21,6 @@ const Slider = () => {
     imageProduct3,
     imageProduct4,
   ];
-  
   const handleNextImage = (direction) => {
     if (direction === "next") {
       setMainImageIndex((prevIndex) => (prevIndex + 1) % thumbnails.length);

@@ -13,36 +13,8 @@ import "./productinfo.css"
 
 const ProductInfo = () => {
 
-
     const [quantity, setQuantity] = useState(0);
-    const [mainImageIndex, setMainImageIndex] = useState(0);
-  
-    const thumbnails = [
-      imageProduct1,
-      imageProduct2,
-      imageProduct3,
-      imageProduct4,
-    ];
-  
-    const handleChangeImage = (index) => {
-      setMainImageIndex(thumbnails[index]);
-    };
-  
-    const handleNextImage = (direction) => {
-      if (direction === "next") {
-        setMainImageIndex((prevIndex) => (prevIndex + 1) % thumbnails.length);
-      } else if (direction === "previous") {
-        setMainImageIndex((prevIndex) =>
-          prevIndex === 0 ? thumbnails.length - 1 : prevIndex - 1
-        );
-      }
-     
-      
-  
-     
-        
-    }
-
+   
 
   return (
     <div className="product_info">
