@@ -1,0 +1,68 @@
+
+/* Left Photos */
+.photos {
+    display: block;
+}
+
+
+.slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30rem;
+    width: 30rem;
+}
+
+.slider .arrow {
+    background-color: white;
+    border-radius: 100%;
+    padding: 0.5rem;
+}
+
+
+
+
+.photos_carrousel {
+    margin-top: 1rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.photos_carrousel img {
+    cursor: pointer;
+    width: 5vw;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+}
+.photos_carrousel img:hover {
+    border: 2px solid var(--orange);
+    opacity:  0.4;
+    transition: border 0.7s;
+    
+}
+
+
+@media (max-width: 999px) {
+   
+    .photos .slider {
+        border: 0;
+        border-radius: 0;
+    }
+
+    .slider .arrow {
+        margin: 20px;
+        width: 1rem;
+        display: block;
+    }
+  
+
+    .photos_carrousel {
+        display: none;
+    }
+
+}

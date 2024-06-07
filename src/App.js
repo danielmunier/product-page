@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar.jsx';
-import Product from './components/Product.jsx';
 import "./App.css"
+import Product from './pages/Product.jsx';
+
 
 function App() {
   return (

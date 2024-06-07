@@ -32,11 +32,11 @@ const Navbar = () => {
               <img src={closeMenu} alt="Close menu" />
             </div>
 
-            <li><a href="">Collections</a></li>
-            <li><a href="">Men</a></li>
-            <li><a href="">Women</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="/">Collections</a></li>
+            <li><a href="/">Men</a></li>
+            <li><a href="/">Women</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Contact</a></li>
           </ul>
 
         <div className='cart-avatar'>
