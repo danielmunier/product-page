@@ -52,12 +52,11 @@
    
     .photos .slider {
         border: 0;
-        border-radius: 0;
+        border-radius: 20px;
     }
 
     .slider .arrow {
         margin: 20px;
-        width: 1rem;
         display: block;
     }
   

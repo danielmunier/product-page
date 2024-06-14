@@ -50,6 +50,9 @@ button {
 }
 
 
+/* Animation */
+
+
 @keyframes openMobileMenu {
     from {
         transform: translateX(-100%);
@@ -117,3 +120,5 @@ button {
         display: block;
     }
 }
+
+

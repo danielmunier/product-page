@@ -4,10 +4,12 @@ import cart from "../assets/images/icon-cart.svg"
 import avatar from "../assets/images/image-avatar.png"
 import closeMenu from "../assets/images/icon-close.svg"
 import "./navbar.css"
+import Cart from './Cart'
 
 
 const Navbar = () => { 
   const [active, setActive] = useState(false)
+  const [cartVisible, setCartVisible] = useState(false)
 
   const handleOpenMenu = (e) => {
     setActive(!active)
@@ -40,7 +42,10 @@ const Navbar = () => {
           </ul>
 
         <div className='cart-avatar'>
-          <button><img id='cart-button' src={cart} alt="Cart" /></button>
+          <button
+          onClick={() => setCartVisible(!cartVisible)}
+          ><img id='cart-button' src={cart} alt="Cart" /></button>
+          {cartVisible ? <Cart /> : null}
           <button><img id='avatar-button' src={avatar} alt="" srcset="" /></button>
         </div>
       </nav>
